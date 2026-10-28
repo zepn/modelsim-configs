@@ -14,9 +14,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/aruyu/modelsim-configs/mas
 > If you are running vsim on **Gnome Wayland with *HiDPI display***,
 > your GUI would be too small to see. *(older GTK2 does not support HiDPI)*
 >
-> Check default value from 'org.gnome.mutter experimental-features',
-> and remove **'xwayland-native-scaling'** field.
+> Check default value of 'org.gnome.mutter.wayland',
+> and set the key to **'1'**.
 
 ```bash
-gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"
+gsettings set org.gnome.mutter.wayland xwayland-scaling-factor 1
 ```
