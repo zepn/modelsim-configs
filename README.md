@@ -17,13 +17,13 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/aruyu/modelsim-configs/mas
 > Check default value of ***'org.gnome.mutter.wayland'*** or ***'org.gnome.mutter experimental-features'***,
 > and change/edit the key.
 
-* GNOME version > 50
+* GNOME version >= 50
 
 ```bash
 gsettings set org.gnome.mutter.wayland xwayland-scaling-factor 1
 ```
 
-* GNOME version <= 49
+* GNOME version < 50
 
 ```bash
 gsettings set org.gnome.mutter experimental-features "['scale-monitor-framebuffer']"
